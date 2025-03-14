@@ -18,13 +18,13 @@ public class AutomationExercise {
 
         driver.findElement(By.linkText("Signup / Login")).click();
 
-        driver.findElement(By.name("name")).sendKeys("Tom");
-        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys("tom123@example.com");
+        driver.findElement(By.name("name")).sendKeys("Tony");
+        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys("tony123@example.com");
         driver.findElement(By.xpath("//button[@data-qa='signup-button']")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         driver.findElement(By.id("password")).sendKeys("Test1234!");
-        driver.findElement(By.id("first_name")).sendKeys("Tom");
+        driver.findElement(By.id("first_name")).sendKeys("Tony");
         driver.findElement(By.id("last_name")).sendKeys("Sun");
         driver.findElement(By.id("address1")).sendKeys("Washington, USA");
         driver.findElement(By.id("state")).sendKeys("Seattle");
@@ -36,7 +36,7 @@ public class AutomationExercise {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
 
-        driver.findElement(By.xpath("//input[@data-qa='login-email']")).sendKeys("tomtest123@example.com");
+        driver.findElement(By.xpath("//input[@data-qa='login-email']")).sendKeys("tonytest123@example.com");
         driver.findElement(By.xpath("//input[@data-qa='login-password']")).sendKeys("Test1234!");
         driver.findElement(By.xpath("//button[@data-qa='login-button']")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
