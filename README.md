@@ -6,3 +6,12 @@
 4. Add any product to the cart
 5. Check if the product you added is added to the cart correctly
 6. Proceed to the payment step
+
+# PROGRAMMING LANGUAGE
+-Java
+
+# FRAMEWORK 
+-TESTNG
+
+# Code Tools
+ - Selenium
