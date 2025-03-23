@@ -17,21 +17,24 @@ This project automates a test scenario for the website Automation Exercise using
 - Dependency Management: Maven
 - Browser: Chrome (via ChromeDriver)
 
-  # PROJECT STRUCTURE
-  automation-exercise/
-│── src/
-│   ├── test/
-│   │   ├── base/
-│   │   │   ├── BaseTest.java  // Setup & teardown methods
-│   │   ├── pages/
-│   │   │   ├── HomePage.java  // Homepage interactions
-│   │   │   ├── RegisterPage.java  // Registration process
-│   │   │   ├── LoginPage.java  // Login interactions
-│   │   │   ├── ProductPage.java  // Adding products to cart
-│   │   │   ├── CartPage.java  // Cart verification
-│   │   │   ├── CheckoutPage.java  // Proceeding to payment
-│   │   ├── tests/
-│   │   │   ├── AutomationExerciseTest.java  // Main test cases
-│── pom.xml  // Dependencies
-│── README.md  // Project details
-│── testng.xml  // TestNG configuration file
+  # Installation & Setup
+  # Prerequisites
+  Ensure you have the following installed on your system:
+
+  -Java JDK (11 or later)
+  -Maven
+  -Chrome Browser
+  -ChromeDriver (compatible with your browser version)
+
+  # Clone the Repository
+     git clone https://github.com/your-repo/automation-exercise.git
+     cd automation-exercise
+
+  # Install Dependencies
+     mvn clean install
+
+  # Configure WebDriver
+    System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+
+  
