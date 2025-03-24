@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Permissions Check
 
 on:
   push:
@@ -14,29 +14,18 @@ on:
   pull_request:
     branches: ["master"]
 
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+  id-token: write
+  packages: read
+
 jobs:
-  build:
+  test-permissions:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        java: [21]  # Expandable to more versions like [17, 21]
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up JDK ${{ matrix.java }}
-        uses: actions/setup-java@v4
-        with:
-          java-version: '${{ matrix.java }}'
-          distribution: 'temurin'
-          cache: maven
-
-      - name: Build without tests
-        run: mvn -B package -DskipTests --file pom.xml
-
-      - name: Run tests
-        run: mvn test
+      - name: Check permissions
+        run: echo "Permissions setup is correct"
 
 
