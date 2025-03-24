@@ -1,7 +1,0 @@
-permissions:
-  actions: read
-  contents: read
-  security-events: write  # Only required for CodeQL or security scanning
-  id-token: write         # Required for OIDC authentication (e.g., AWS, GCP, Azure)
-  packages: read          # Remove if GitHub Packages are not used
-
